@@ -10,6 +10,60 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ---- Embed vidéo Drive ---- */
+    .video-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: #080808;
+      margin-bottom: 0.5rem;
+    }
+    .video-wrap iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .video-label {
+      display: block;
+      font-family: var(--font-body);
+      font-size: 0.65rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+      opacity: 0.8;
+    }
+    .video-block {
+      margin-bottom: 2rem;
+    }
+
+    /* ---- Cartes Life Quest — pleine taille, sans crop ---- */
+    .gallery-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+      align-items: start;
+    }
+    .gallery-cards figure {
+      margin: 0;
+    }
+    .gallery-cards img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: var(--radius);
+      box-shadow: 0 6px 32px rgba(0,0,0,0.55);
+    }
+    @media (max-width: 640px) {
+      .gallery-cards { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
   <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
@@ -50,9 +104,13 @@
           <span class="project-num">01 — Escape game narratif VR</span>
         </div>
 
-        <figure class="media wide reveal" data-src="images/projets/way-back-home-cover.svg">
-          <img src="images/projets/way-back-home-cover.svg" alt="Way Back Home — visuel principal" loading="lazy" onerror="this.remove()">
-        </figure>
+        <!-- Trailer en cover -->
+        <div class="video-block reveal">
+          <span class="video-label">Trailer</span>
+          <div class="video-wrap">
+            <iframe src="https://drive.google.com/file/d/1V0x-WjJd2VC6F0_58e3KF-IH7N_NfNfK/preview" allow="autoplay" allowfullscreen></iframe>
+          </div>
+        </div>
 
         <div class="project-body">
           <div class="reveal">
@@ -83,10 +141,12 @@
           </div>
         </div>
 
-        <div class="gallery">
-          <figure class="media" data-src="images/projets/way-back-home-1.svg"><img src="images/projets/way-back-home-1.svg" alt="Way Back Home — capture 1" loading="lazy" onerror="this.remove()"></figure>
-          <figure class="media" data-src="images/projets/way-back-home-2.svg"><img src="images/projets/way-back-home-2.svg" alt="Way Back Home — capture 2" loading="lazy" onerror="this.remove()"></figure>
-          <figure class="media" data-src="images/projets/way-back-home-3.svg"><img src="images/projets/way-back-home-3.svg" alt="Way Back Home — capture 3" loading="lazy" onerror="this.remove()"></figure>
+        <!-- Gameplay -->
+        <div class="video-block reveal">
+          <span class="video-label">Gameplay</span>
+          <div class="video-wrap">
+            <iframe src="https://drive.google.com/file/d/1caBxUxvUguCe-ifUTBg7BiY_tLApZv6d/preview" allow="autoplay" allowfullscreen></iframe>
+          </div>
         </div>
       </div>
     </article>
@@ -99,8 +159,8 @@
           <span class="project-num">02 — Tactical brawler au tour par tour</span>
         </div>
 
-        <figure class="media wide reveal" data-src="images/projets/mines-rumble-cover.svg">
-          <img src="images/projets/mines-rumble-cover.svg" alt="Mines Rumble — visuel principal" loading="lazy" onerror="this.remove()">
+        <figure class="media wide reveal" data-src="images/projets/mines-rumble-cover.jpg">
+          <img src="images/projets/mines-rumble-cover.jpg" alt="Mines Rumble — visuel principal" loading="lazy" onerror="this.remove()">
         </figure>
 
         <div class="project-body">
@@ -131,9 +191,9 @@
         </div>
 
         <div class="gallery">
-          <figure class="media" data-src="images/projets/mines-rumble-1.svg"><img src="images/projets/mines-rumble-1.svg" alt="Mines Rumble — capture 1" loading="lazy" onerror="this.remove()"></figure>
-          <figure class="media" data-src="images/projets/mines-rumble-2.svg"><img src="images/projets/mines-rumble-2.svg" alt="Mines Rumble — capture 2" loading="lazy" onerror="this.remove()"></figure>
-          <figure class="media" data-src="images/projets/mines-rumble-3.svg"><img src="images/projets/mines-rumble-3.svg" alt="Mines Rumble — capture 3" loading="lazy" onerror="this.remove()"></figure>
+          <figure class="media" data-src="images/projets/mines-rumble-1.jpg"><img src="images/projets/mines-rumble-1.jpg" alt="Mines Rumble — capture 1" loading="lazy" onerror="this.remove()"></figure>
+          <figure class="media" data-src="images/projets/mines-rumble-2.jpg"><img src="images/projets/mines-rumble-2.jpg" alt="Mines Rumble — capture 2" loading="lazy" onerror="this.remove()"></figure>
+          <figure class="media" data-src="images/projets/mines-rumble-3.jpg"><img src="images/projets/mines-rumble-3.jpg" alt="Mines Rumble — capture 3" loading="lazy" onerror="this.remove()"></figure>
         </div>
       </div>
     </article>
@@ -146,9 +206,13 @@
           <span class="project-num">03 — Arena shooter nerveux</span>
         </div>
 
-        <figure class="media wide reveal" data-src="images/projets/hollyshoot-cover.svg">
-          <img src="images/projets/hollyshoot-cover.svg" alt="HollyShoot! — visuel principal" loading="lazy" onerror="this.remove()">
-        </figure>
+        <!-- Trailer en cover -->
+        <div class="video-block reveal">
+          <span class="video-label">Trailer Gameplay</span>
+          <div class="video-wrap">
+            <iframe src="https://drive.google.com/file/d/1hrFfpCtJK5Fk-mIWcYm8n8qm8WTAAFxC/preview" allow="autoplay" allowfullscreen></iframe>
+          </div>
+        </div>
 
         <div class="project-body">
           <div class="reveal">
@@ -178,10 +242,12 @@
           </div>
         </div>
 
-        <div class="gallery">
-          <figure class="media" data-src="images/projets/hollyshoot-1.svg"><img src="images/projets/hollyshoot-1.svg" alt="HollyShoot! — capture 1" loading="lazy" onerror="this.remove()"></figure>
-          <figure class="media" data-src="images/projets/hollyshoot-2.svg"><img src="images/projets/hollyshoot-2.svg" alt="HollyShoot! — capture 2" loading="lazy" onerror="this.remove()"></figure>
-          <figure class="media" data-src="images/projets/hollyshoot-3.svg"><img src="images/projets/hollyshoot-3.svg" alt="HollyShoot! — capture 3" loading="lazy" onerror="this.remove()"></figure>
+        <!-- Gameplay long -->
+        <div class="video-block reveal">
+          <span class="video-label">Gameplay complet</span>
+          <div class="video-wrap">
+            <iframe src="https://drive.google.com/file/d/1uz6X4S-CcODtW-vqmTS2HIuIyl-sR-nk/preview" allow="autoplay" allowfullscreen></iframe>
+          </div>
         </div>
       </div>
     </article>
@@ -193,10 +259,6 @@
           <h2>Life Quest</h2>
           <span class="project-num">04 — Jeu de cartes / party game</span>
         </div>
-
-        <figure class="media wide reveal" data-src="images/projets/life-quest-cover.png">
-          <img src="images/projets/life-quest-cover.png" alt="Life Quest — visuel principal" loading="lazy" onerror="this.remove()">
-        </figure>
 
         <div class="project-body">
           <div class="reveal">
@@ -225,10 +287,11 @@
           </div>
         </div>
 
-        <div class="gallery">
-          <figure class="media tall" data-src="images/projets/life-quest-1.png"><img src="images/projets/life-quest-1.png" alt="Life Quest — carte 1" loading="lazy" onerror="this.remove()"></figure>
-          <figure class="media tall" data-src="images/projets/life-quest-2.png"><img src="images/projets/life-quest-2.png" alt="Life Quest — carte 2" loading="lazy" onerror="this.remove()"></figure>
-          <figure class="media tall" data-src="images/projets/life-quest-3.png"><img src="images/projets/life-quest-3.png" alt="Life Quest — carte 3" loading="lazy" onerror="this.remove()"></figure>
+        <!-- Cartes sans crop : images natives, hauteur auto -->
+        <div class="gallery-cards reveal">
+          <figure><img src="images/projets/life-quest-1.png" alt="Life Quest — ATQ Conqueror" loading="lazy"></figure>
+          <figure><img src="images/projets/life-quest-2.png" alt="Life Quest — DEF Ramen" loading="lazy"></figure>
+          <figure><img src="images/projets/life-quest-3.png" alt="Life Quest — SPE Lumière du concert" loading="lazy"></figure>
         </div>
       </div>
     </article>
