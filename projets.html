@@ -42,6 +42,46 @@
       margin-bottom: 2rem;
     }
 
+    /* ---- Section documents GDD ---- */
+    .doc-gallery {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .doc-gallery figure {
+      margin: 0;
+    }
+    .doc-gallery img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: var(--radius);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+      transition: transform 0.2s ease;
+    }
+    .doc-gallery img:hover {
+      transform: scale(1.03);
+    }
+    .doc-gallery-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .section-label {
+      display: block;
+      font-family: var(--font-body);
+      font-size: 0.65rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+      opacity: 0.8;
+    }
+    @media (max-width: 640px) {
+      .doc-gallery { grid-template-columns: 1fr 1fr; }
+      .doc-gallery-3 { grid-template-columns: 1fr 1fr; }
+    }
+
     /* ---- Cartes Life Quest — pleine taille, sans crop ---- */
     .gallery-cards {
       display: grid;
@@ -159,10 +199,6 @@
           <span class="project-num">02 — Tactical brawler au tour par tour</span>
         </div>
 
-        <figure class="media wide reveal" data-src="images/projets/mines-rumble-cover.jpg">
-          <img src="images/projets/mines-rumble-cover.jpg" alt="Mines Rumble — visuel principal" loading="lazy" onerror="this.remove()">
-        </figure>
-
         <div class="project-body">
           <div class="reveal">
             <p class="pitch">Un tactical brawler joueur contre IA : pour gagner, poussez les unités ennemies hors du terrain grâce aux capacités de vos personnages.</p>
@@ -190,10 +226,13 @@
           </div>
         </div>
 
-        <div class="gallery">
-          <figure class="media" data-src="images/projets/mines-rumble-1.jpg"><img src="images/projets/mines-rumble-1.jpg" alt="Mines Rumble — capture 1" loading="lazy" onerror="this.remove()"></figure>
-          <figure class="media" data-src="images/projets/mines-rumble-2.jpg"><img src="images/projets/mines-rumble-2.jpg" alt="Mines Rumble — capture 2" loading="lazy" onerror="this.remove()"></figure>
-          <figure class="media" data-src="images/projets/mines-rumble-3.jpg"><img src="images/projets/mines-rumble-3.jpg" alt="Mines Rumble — capture 3" loading="lazy" onerror="this.remove()"></figure>
+        <!-- Extraits du Game Design Document -->
+        <span class="section-label reveal">Extraits du Game Design Document</span>
+        <div class="doc-gallery reveal">
+          <figure><img src="images/projets/mr-doc-p1.jpg" alt="Mines Rumble — Page de titre" loading="lazy"></figure>
+          <figure><img src="images/projets/mr-doc-p4.jpg" alt="Mines Rumble — Personnage Rock" loading="lazy"></figure>
+          <figure><img src="images/projets/mr-doc-p6.jpg" alt="Mines Rumble — Personnage Éclaireur" loading="lazy"></figure>
+          <figure><img src="images/projets/mr-doc-p7.jpg" alt="Mines Rumble — Terrain et cases" loading="lazy"></figure>
         </div>
       </div>
     </article>
@@ -249,6 +288,10 @@
             <iframe src="https://www.youtube.com/embed/UrBSELKfMlY" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
+
+        <div class="reveal" style="margin-top:1rem;">
+          <a href="https://lionel-leboulanger.itch.io/hollyshoot" target="_blank" rel="noopener" class="btn">Jouer sur itch.io →</a>
+        </div>
       </div>
     </article>
 
@@ -292,6 +335,14 @@
           <figure><img src="images/projets/life-quest-1.png" alt="Life Quest — ATQ Conqueror" loading="lazy"></figure>
           <figure><img src="images/projets/life-quest-2.png" alt="Life Quest — DEF Ramen" loading="lazy"></figure>
           <figure><img src="images/projets/life-quest-3.png" alt="Life Quest — SPE Lumière du concert" loading="lazy"></figure>
+        </div>
+
+        <!-- Extraits du document de conception -->
+        <span class="section-label reveal">Extraits du document de conception</span>
+        <div class="doc-gallery doc-gallery-3 reveal">
+          <figure><img src="images/projets/lq-doc-p1.jpg" alt="Life Quest — Document, page 1" loading="lazy"></figure>
+          <figure><img src="images/projets/lq-doc-p2.jpg" alt="Life Quest — Document, page 2" loading="lazy"></figure>
+          <figure><img src="images/projets/lq-doc-p3.jpg" alt="Life Quest — Document, page 3" loading="lazy"></figure>
         </div>
       </div>
     </article>
